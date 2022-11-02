@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+{% block content %}
+<h1>Sugandh store</h1>
+<div class ="row">
+    <div class="col-md-3">
+    {% for Products in products %}
+    <div class="card" style="width: 18rem;">
+  <img src="{{Products.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{Products.name}}</h5>
+    <p class="card-text">{{Products.price}}</p>
+    <a href="#" class="btn btn-primary">buy</a>
+
+</div>
+</div>
+  </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
